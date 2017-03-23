@@ -1,6 +1,6 @@
 # Mancik Sayang
 
-example C/C++ program to process video file or camera capture using opencv and serve the data over http using libevent evhttp. feel free to change this code.
+example C/C++ program to process video file or camera capture using opencv and serve the data over http using libevent evhttp. the program is detecting 3 red circles and write the middle circle movements from its first point. feel free to change this code.
 me : hello@arifnurkhoirudin.com
 
 # Dependency
