@@ -17,14 +17,12 @@ int main(int argc, char* argv[])
     return -1;
   }
 
-  string device = argv[1];
-  string cts = ".";
+  // capture from camera
+  // VideoCapture cap(atoi(argv[1]);
+
+  //capture from file
   VideoCapture cap(argv[1]);
-  if (device.find(cts) != string::npos){
-    VideoCapture cap(string);
-  }else{
-    VideoCapture cap(atoi(argv[1]));
-  }
+
   if ( !cap.isOpened() ) {
        cout << "Cannot open the video file" << endl;
        return -1;
