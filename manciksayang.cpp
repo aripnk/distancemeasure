@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
   }
 
   // capture from camera
-  // VideoCapture cap(atoi(argv[1]);
+  // VideoCapture cap(atoi(argv[1]));
 
   //capture from file
   VideoCapture cap(argv[1]);
@@ -114,7 +114,6 @@ int main(int argc, char* argv[])
       ytemp=static_cast<int>((abs(pts[1].y - yfirst) / magic));
       ydata=ytemp *-1;
       m.unlock();
-      printf("%f\n",magic );
       printf("x == %d px --> %d ||",pts[1].x, xdata);
       printf("y == %d px --> %d\n",pts[1].y, ydata);
       //time
@@ -185,7 +184,7 @@ void http_serving() {
 
 void  setmagic(int x1,int x2,int rl) {
     printf("%s\n","set magic" );
-    magic = abs(x1 - x2) / rl;
+    magic = (double)abs(x1 - x2) / (double)rl;
 }
 
 void setzero(int x, int y, int x1, int x2, int reals){
