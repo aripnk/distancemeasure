@@ -22,7 +22,7 @@ mutex m;
 int xdata, ydata;
 int xfirst = 0;
 int yfirst = 0;
-long double magic;
+long double magic = 0.1;
 
 
 struct myclass {

@@ -108,14 +108,14 @@ int main(int argc, char* argv[])
       int ytemp;
 
       m.lock();
-      //SET THE RATION ON 5th LOOP
+      //SET THE RATIO ON 5th LOOP
       if (i == 5) setzero(pts[1].x, pts[1].y, pts[0].x, pts[2].x, real);
       xdata=static_cast<int>((abs(pts[1].x - xfirst) / magic));
       ytemp=static_cast<int>((abs(pts[1].y - yfirst) / magic));
       ydata=ytemp *-1;
       m.unlock();
-      printf("x == %d px --> %d ||",pts[1].x, xdata);
-      printf("y == %d px --> %d\n",pts[1].y, ydata);
+      printf("x == %d px --> %d mm||",pts[1].x - xfirst, xdata);
+      printf("y == %d px --> %d mm\n",pts[1].y - yfirst, ydata);
       //time
       time_t t = time(NULL);
       struct tm tm = *localtime(&t);
